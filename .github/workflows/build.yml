@@ -1,6 +1,9 @@
 name: Build DLL
 
 on:
+  push:
+    branches: [build/arrival-timer-test]
+  workflow_dispatch:
   pull_request:
     branches: [main,master,dev,develop]
   release:
