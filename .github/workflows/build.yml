@@ -33,6 +33,7 @@ jobs:
 
       - name: Integrate vcpkg with MSBuild
         run: |
+            New-Item -ItemType Directory -Force (Join-Path $env:TEMP 'vcpkg') | Out-Null
             .\vcpkg\vcpkg.exe integrate install
 
       - name: Update Plugin Version
